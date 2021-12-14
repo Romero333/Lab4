@@ -1,0 +1,35 @@
+<div id="about-container">
+  <div id="about-container-inner">
+    <app-header></app-header>
+      <div class="art-content">
+          <div class="art-c1">
+              <h1 class="mt-4 mb-4">This Week's Best-Selling Artists</h1>
+              <div class="alert alert-danger">
+                  <span>Each week we show you who are our best-selling artists ...</span>
+              </div>
+              <div class="art-container-grid">
+                <app-artist-card *ngFor="let artist of artists" [artist]="artist"></app-artist-card>
+                  <!-- <div class="artist-card" *ngFor="let artist of artists">
+                      <img [src]="artist.image_url" [alt]="artist.full_name">
+                      <h2 class="small">{{artist.full_name}}</h2>
+                      <button class="btn btn-primary full-width">
+                          <i class="fas fa-fire-alt"></i> Sales
+                          <span class="badge badge-pill badge-light badge-fix">{{artist.num_sales}}</span>
+                      </button>
+                  </div> -->
+
+              </div>
+              <div class="progress-space">
+                  <h2 class="small">Artists By Genre</h2>
+                  <div class="progress bar-fix">
+                      <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Gothic</div>
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Renaissance</div>
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 15%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Baroque</div>
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Pre-modern</div>
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Modern</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
